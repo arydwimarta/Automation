@@ -1,0 +1,10 @@
+---
+- hosts: all
+  gather_facts: true
+  sudo: true
+  remote_user: root
+  roles:
+    - { role: manage-user,
+        user: { name: user1 } }
+    - { role: manage-user,
+        user: { name: user2 } }
